@@ -1,0 +1,8 @@
+apiVersion: env.ruslan.marinin/v1alpha1
+kind: DevNS
+metadata:
+  name: devns-sample
+spec:
+  Name: "jira-001-namespace"
+  jiraTicket: "JIRA-001"
+  gitBranch: "feature-JIRA-001"

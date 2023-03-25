@@ -1,0 +1,16 @@
+kind: StandaloneWorkload
+name: dev-ns-config
+spec:
+  api:
+    clusterScoped: true
+    domain: ruslan.marinin
+    group: env
+    kind: DevNS
+    version: v1alpha1
+  # companionCliRootcmd:
+  #   description: Manage myapp workload
+  #   name: myapp
+  # manifests:
+  #   - filename: ns.yaml
+  resources:
+    - ns.yaml

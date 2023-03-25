@@ -1,0 +1,24 @@
+domain: ruslan.marinin
+layout:
+- go.kubebuilder.io/v3
+multigroup: true
+plugins:
+  operatorBuilder:
+    cliRootCommandName: ""
+    controllerImg: ""
+    workloadConfigPath: .source-manifests/workload.yaml
+projectName: dev-ns-operator
+repo: github.com/RuslanMarinin/dev-ns-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: ruslan.marinin
+  group: env
+  kind: DevNS
+  path: github.com/RuslanMarinin/dev-ns-operator/apis/env/v1alpha1
+  version: v1alpha1
+- kind: ""
+  version: ""
+version: "3"

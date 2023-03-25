@@ -1,0 +1,10 @@
+# .source-manifests/app.yaml
+
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: "development" # +operator-builder:field:name=Name,type=string
+  labels:
+    name: "development" # +operator-builder:field:name=Name,type=string
+    jiraTicket: "JIRA-001"  # +operator-builder:field:name=jiraTicket,type=string
+    gitBranch: "feature/JIRA-001"  # +operator-builder:field:name=gitBranch,type=string

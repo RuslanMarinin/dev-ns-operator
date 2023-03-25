@@ -1,0 +1,27 @@
+# permissions for end users to view devns.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: devns-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: dev-ns-operator
+    app.kubernetes.io/part-of: dev-ns-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: devns-viewer-role
+rules:
+- apiGroups:
+  - env.ruslan.marinin
+  resources:
+  - devns
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - env.ruslan.marinin
+  resources:
+  - devns/status
+  verbs:
+  - get
